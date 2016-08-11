@@ -1,0 +1,25 @@
+<section class="section-work">
+
+    <h3 id="projects">Projects</h3>
+    <div class="work-belt">
+        <div class="outer-thumb-wrap">
+            <section class="thumb-wrap">
+                {% for project in site.data.settings.project %}
+                <div class="thumbs" data-folder="{{project.folder}}">
+                    <img src="assets/img/work/{{project.folder}}/thumb.jpg" alt="{{ project.name }}"/>
+                    <div class="overlay"><strong>{{ project.title }}</strong></div>
+                </div>
+                {% endfor %}
+            </section>
+        </div>
+        <div class="outer-work-wrap">
+            <section class="work-container">
+                <div class="work-return">{% include icons/icon-back.html %}</div>
+                <h4 class="project-title"></h4>
+                <div class="project-load">
+
+                </div>
+            </section>
+        </div>
+    </div>
+</section>

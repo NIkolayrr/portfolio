@@ -1,0 +1,95 @@
+.about
+  +clearfix
+  +display(flex)
+  +flex-direction(row)
+
+  section.resume
+    padding: 30px
+    text-align: center
+    flex: 1.2
+
+  .portrait
+    +size(150px)
+    margin: 10px auto
+    background:
+      image: url('../img/portrait.png')
+      size: contain
+  h4
+    margin: 0
+    font-size: medium
+
+  p.about-text
+    max-width: 560px
+    margin: 10px auto
+    font-size: 18px
+    text-align: center
+    font-weight: 300
+
+  .skills-lockup
+    color: #999
+    flex: 1
+    margin: 0 auto
+    padding: 5% 2% 2% 2%
+
+  .skill-unit
+    width: 280px
+    float: left
+
+  .skill-icons
+    font-size: 0
+    margin: 3px 0 30px
+
+    span
+      display: inline-block
+      +size(12px)
+      background: white
+      border: 1px solid $accent-color
+      margin-right: 8px
+      border-radius: 50%
+
+      &:after
+        content: ''
+        display: block
+        +size(10px)
+        background: $accent-color
+        border-radius: 50%
+        border: 1px solid white
+
+    @for $i from 1 through 10
+      &.skill-#{$i} span:nth-child(n+#{$i+1})
+        &:after
+          @extend %skill-color
+
+  .social-links
+    width: 300px
+    margin: 0 auto
+    padding-bottom: 10px
+    +display(flex)
+    +justify-content(space-around)
+
+    a
+      width: 30px
+
+      path
+        fill: $accent-color
+
+%skill-color
+  content: ''
+  position: absolute
+  +size(8px)
+  border-radius: 50%
+  background: #eee
+
+@media (max-width: 741px)
+  .about
+    +flex-direction(column)
+
+    .resume
+      +flex(1)
+
+  .skills-inner-wrap
+    text-align: center
+    margin: 0 auto
+
+  .skill-unit
+    float: none

@@ -1,0 +1,34 @@
+#-------------------------------
+# General Site Settings
+
+title: Nikolayrr
+email: nikolay.r.rangelov@gmail.com
+description: Designer // Programmer // Athlete
+
+#About section
+
+about-text: <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit,
+  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+
+#Social
+facebook: https://www.facebook.com/nikolay.rangelov.3
+twitter: https://twitter.com/Nikolayrr
+likedin: https://www.linkedin.com/
+instagram: https://www.instagram.com/nikolayrangelov/
+
+skills:
+- {name: Communication, value: '9'}
+- {name: Learning, value: '10'}
+- {name: Planning, value: '7'}
+- {name: Visual Design, value: '5'}
+- {name: UX Design, value: '8'}
+- {name: Programming, value: '6'}
+
+#-------------------------------
+# Work Section
+
+project:
+- {title: Mig Nevestino website, folder: 'proj-1',file: 'work/proj-1.html'}
+- {title: Softuni Website, folder: 'proj-2',file: 'work/proj-2.html'}
+- {title: Books library, folder: 'proj-3',file: 'work/proj-3.html'}
+
